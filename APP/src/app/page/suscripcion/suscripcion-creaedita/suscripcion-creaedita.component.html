@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div style="text-align: center">
+        <h1>Registro de suscripciones</h1>
+        <form [formGroup]="form" (submit)="aceptar()">
+          <mat-form-field class="example-full-width">
+            <div>ID USUARIO</div>
+            <input matInput placeholder="Id" formControlName="id" />
+          </mat-form-field>
+
+          <br />
+          <mat-form-field appearance="fill">
+            <div>ID TIPO MEMBRESIA</div>
+            <mat-select formControlName="idtipo_membresia">
+              <mat-option value="1">1</mat-option>
+              <mat-option value="2">2</mat-option>
+            </mat-select>
+          </mat-form-field>
+
+          <br />
+          <mat-form-field appearance="fill">
+            <div>FECHA DE INICIO</div>
+            <input matInput [matDatepicker]="picker"formControlName="fecha_inicio" [max]="maxFecha"/>
+            <mat-datepicker-toggle matSuffix [for]="picker"
+            ></mat-datepicker-toggle>
+            <mat-datepicker #picker></mat-datepicker>
+          </mat-form-field>
+
+          <br />
+          <mat-form-field appearance="fill">
+            <div>FECHA DE FIN</div>
+            <input matInput [matDatepicker]="picker2" formControlName="fecha_fin" [max]="maxFecha"/>
+            <mat-datepicker-toggle matSuffix [for]="picker2"></mat-datepicker-toggle>
+            <mat-datepicker #picker2></mat-datepicker>
+          </mat-form-field>
+
+          <br />
+          <mat-form-field class="example-full-width">
+            <div>ID PAGO</div>
+            <input matInput placeholder="IdPago" formControlName="idpago" />
+          </mat-form-field>
+
+          <br />
+          <button mat-raised-button color="primary" (click)="aceptar()" style="margin: 30px;">
+            Aceptar
+          </button>
+          <button mat-raised-button color="warn" routerLink="/suscripcion">
+            Cancelar
+          </button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

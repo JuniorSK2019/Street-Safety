@@ -1,0 +1,16 @@
+<mat-dialog-content>
+  <p>¿Estas seguro que desea eliminar la suscripcion?</p>
+  <div class="center">
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="confirmar(true)"
+      style="margin: 25px"
+    >
+      Si
+    </button>
+    <button mat-raised-button color="accent" (click)="confirmar(false)">
+      No
+    </button>
+  </div>
+</mat-dialog-content>

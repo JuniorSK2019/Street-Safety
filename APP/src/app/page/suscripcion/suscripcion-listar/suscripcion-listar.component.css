@@ -1,0 +1,35 @@
+button.botonnuevo{
+  background-color: #04A9C6;
+  border-radius:10px;
+  font-size: 20px;
+  color: white;
+}
+
+button.botondetalles{
+  background-color: #99D2DB;
+  color: black;
+  border-radius: 7px;
+  margin:8px;
+  font-size: medium;
+
+}
+
+button.botoneliminar{
+  background-color: darkred;
+  color: white;
+  border-radius: 7px;
+  font-size: medium;
+  margin:8px;
+}
+
+div.botondetalles{
+  text-align: center;
+}
+
+div.botoneliminar{
+  text-align: center;
+}
+input{
+  width: 19%;
+}
+
