@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div style="text-align:center">
+            <h1>Registro de delitos</h1>
+        </div>
+    
+    <form [formGroup]="form" (submit)="aceptar()">
+        <mat-form-field class="example-full-width">
+            <mat-label>idDelito</mat-label>
+            <input matInput placeholder="id" formControlName="id">
+        </mat-form-field>
+        <br> 
+        <mat-form-field class="example-full-width">
+            <mat-label>hora</mat-label>
+            <input matInput placeholder="hora" formControlName="Hora">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Fecha</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="Fecha" placeholder="Choose a date">
+            <mat-datepicker-toggle [for]="picker"></mat-datepicker-toggle><mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Distrito</mat-label>
+            <input matInput placeholder="distrito" formControlName="Distrito">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Distrito_idZona</mat-label>
+            <input matInput placeholder="distrito_idZona" formControlName="Distrito_idZona">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>IdTipoDelitos</mat-label>
+            <input matInput placeholder="TipoDelitos" formControlName="IdTipoDelitos">
+        </mat-form-field>
+        <br>
+        <div style="text-align: center;">
+                <button mat-raised-button color="primary">Aceptar</button>
+                <button mat-raised-button color="warn" routerLink="/delitos">Cancelar</button>
+        </div>
+    </form> 
+    </div>
+</body>
+</html>
