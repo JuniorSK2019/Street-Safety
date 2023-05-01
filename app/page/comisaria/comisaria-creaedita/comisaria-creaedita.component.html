@@ -1,0 +1,69 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <div>
+    <div class="container">
+      <h1>Registrar Comisaria</h1>
+      <form [formGroup]="form" (submit)="aceptar()">
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Id</mat-label>
+        <input matInput required placeholder="Id" formControlName="id">
+      </mat-form-field>
+
+      <br>
+      <mat-form-field class="example-full-width">
+        <mat-label>Nombre</mat-label>
+        <input matInput placeholder="name" formControlName="nameComisaria" required > 
+      </mat-form-field>
+
+      <br>
+      <mat-form-field class="example-full-width">
+        <mat-label>Direccion</mat-label>
+        <input matInput required placeholder="direccion" formControlName="direccionComisaria">
+      </mat-form-field>
+      
+      <br>
+      <mat-form-field class="example-full-width">
+        <mat-label>Celular</mat-label>
+        <input matInput required placeholder="celular" formControlName="cellComisaria">
+      </mat-form-field>
+     
+
+      <br>
+      <mat-form-field class="example-full-width">
+        <mat-label>IdAlerta</mat-label>
+        <input matInput required placeholder="idAlerta" formControlName="idAlerta">
+      </mat-form-field>
+
+      <br>
+      <mat-form-field class="example-full-width">
+        <mat-label>Latitud</mat-label>
+        <input matInput required placeholder="Latitud" formControlName="Latitud">
+      </mat-form-field>
+
+      <br>
+      <mat-form-field class="example-full-width">
+        <mat-label>Longitud</mat-label>
+        <input matInput required placeholder="Longitud" formControlName="Longitud">
+      </mat-form-field>
+
+      <br>
+
+        <button mat-raised-button color="primary" (click)="aceptar()">Aceptar</button>
+
+        <button mat-raised-button color="warn" routerLink="/comisarias">Cancelar</button>
+      <p>{{mensaje}}</p>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
+
