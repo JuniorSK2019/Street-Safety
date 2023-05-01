@@ -1,77 +1,42 @@
-
-module.exports = function () {
-  var data = {
-    usuarios: [
+module.exports=function(){
+  var data={
+    suscripcion:[
       {
         id:1,
-		username:"Rengar",
-		password:"zzzzzzzzzz",
-		email:"emilg29090@gmail.com",
-		nombres_usuario:"Emilio",
-		apellidos_usuario:"Gonzales Castro",
-		fecha_nacimiento:"2001-08-18",
-		idalerta:1,
-		iddistrito:5,
-		idsuscripcion:1
-	  },
+        idtipo_membresia:"1",
+        fecha_inicio:"04-07-2023",
+        fecha_fin:"07-07-2023",
+        idpago:"P01",
+      },
       {
         id:2,
-		username:"Hanzo",
-		password:"gaaaaaaaaaa",
-		email:"hudosino00@gmail.com",
-		nombres_usuario:"Arnold Samir",
-		apellidos_usuario:"Torres Rotas",
-		fecha_nacimiento:"2000-01-20",
-		idalerta:2,
-		iddistrito:10,
-		idsuscripcion:2
+        idtipo_membresia:"1",
+        fecha_inicio:"04-16-2023",
+        fecha_fin:"07-16-2023",
+        idpago:"P02",
       },
       {
         id:3,
-		username:"Hanzo",
-		password:"gaaaaaaaaaa",
-		email:"hudosino00@gmail.com",
-		nombres_usuario:"Arnold Samir",
-		apellidos_usuario:"Torres Rotas",
-		fecha_nacimiento:"2000-10-10",
-		idalerta:3,
-		iddistrito:1,
-		idsuscripcion:3
+        idtipo_membresia:"2",
+        fecha_inicio:"05-20-2023",
+        fecha_fin:"11-20-2023",
+        idpago:"P03",
       },
-    
-    ],
-	Delitos: [
-		{
-			id:1,
-            Hora:"12",
-            Fecha:"2000-10-10",
-            Distrito:"Surco",
-            Distrito_idZona:1,
-            IdTipoDelitos:2
-		},
-	    {
-			id:2,
-            Hora:"11",
-            Fecha:"2000-10-19",
-            Distrito:"Surco",
-            Distrito_idZona:3,
-            IdTipoDelitos:5
-		}
-	
-	],
-	comisarias:[
-		{
-			id:2,
-			nameComisaria: " Comisaria San Borja" ,
-			direccionComisaria: " San Borja . Av Lima " ,
-			cellComisaria: " 987902567" , 
-			idAlerta: "3",
-			Latitud: "25 00" ,
-			Longitud:number = "78 12"
-		  
-		},
-	  ]
-	
+      {
+        id:4,
+        idtipo_membresia:"1",
+        fecha_inicio:"04-10-2023",
+        fecha_fin:"07-10-2023",
+        idpago:"P04",
+      },
+      {
+        id:5,
+        idtipo_membresia:"2",
+        fecha_inicio:"06-01-2023",
+        fecha_fin:"12-01-2023",
+        idpago:"P05",
+      }
+    ]
   }
   return data
 }

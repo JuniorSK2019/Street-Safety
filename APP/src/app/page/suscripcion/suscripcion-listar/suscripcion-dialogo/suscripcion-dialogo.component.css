@@ -1,0 +1,20 @@
+button{
+  font-size: medium;
+  background-color: #DB2B2B;
+  border-radius: 10px;
+  color:white;
+  width: 21%;
+}
+div.center{
+  text-align: center;
+}
+
+mat-dialog-content{
+  font-style: italic;
+padding: 10px 30px;
+border-radius: 100px;
+}
+
+p{
+  color: black;
+}

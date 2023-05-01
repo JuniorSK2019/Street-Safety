@@ -3,74 +3,46 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule } from '@angular/common/http';
-import { UsuariosComponent } from './page/usuarios/usuarios.component';
-import { UsuariosListarComponent } from './page/usuarios/usuarios-listar/usuarios-listar.component';
+import {HttpClientModule,HttpClient,HttpHeaders,} from '@angular/common/http';
+import { SuscripcionComponent } from './page/suscripcion/suscripcion.component';
+import { SuscripcionListarComponent } from './page/suscripcion/suscripcion-listar/suscripcion-listar.component';
 import { MatTableModule } from '@angular/material/table';
-import { ReactiveFormsModule } from '@angular/forms';
-import { MatNativeDateModule } from '@angular/material/core';
-import { FormsModule } from '@angular/forms'
-import{MatInputModule} from '@angular/material/input'
-import{MatSelectModule} from '@angular/material/select'
-import{MatDatepickerModule} from '@angular/material/datepicker'
-import {MatPaginatorModule} from '@angular/material/paginator'
-import { MatButtonModule } from '@angular/material/button';
-import { UsuariosCreaditaComponent } from './page/usuarios/usuarios-creadita/usuarios-creadita.component';
-import { ToolbarComponent } from './page/toolbar/toolbar.component';
-import { MatToolbarModule} from '@angular/material/toolbar';
-import{MatIconModule} from'@angular/material/icon';
-import {MatMenuModule} from '@angular/material/menu';
-import { DelitosComponent } from './page/delitos/delitos.component';
-import { DelitosListarComponent } from './page/delitos/delitos-listar/delitos-listar.component';
-import { DelitosCreaditaComponent } from './page/delitos/delitos-creadita/delitos-creadita.component';
-import { DelitosDialogoComponent } from './page/delitos/delitos-listar/delitos-dialogo/delitos-dialogo.component';
-import { MatDialogModule} from '@angular/material/dialog';
-import { ComisariaComponent } from './page/comisaria/comisaria.component';
-import { ComisariaListarComponent } from './page/comisaria/comisaria-listar/comisaria-listar.component';
-import { ComisariaCreaeditaComponent } from './page/comisaria/comisaria-creaedita/comisaria-creaedita.component';
-import { ComisariaDialogoComponent } from './page/comisaria/comisaria-listar/comisaria-dialogo/comisaria-dialogo.component';
-import { UsuariosDialogoComponent } from './page/usuarios/usuarios-listar/usuarios-dialogo/usuarios-dialogo.component'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {ReactiveFormsModule}from'@angular/forms';
+import {MatNativeDateModule}from '@angular/material/core';
+import {MatDialogModule}from '@angular/material/dialog';
+import {FormsModule}from '@angular/forms';
+import {MatSelectModule}from '@angular/material/select';
+import { SuscripcionCreaeditaComponent } from './page/suscripcion/suscripcion-creaedita/suscripcion-creaedita.component';
+import { SuscripcionDialogoComponent } from './page/suscripcion/suscripcion-listar/suscripcion-dialogo/suscripcion-dialogo.component'
+import {MatDatepickerModule}from '@angular/material/datepicker';
+import {MatInputModule} from '@angular/material/input';
+
 @NgModule({
   declarations: [
     AppComponent,
-    UsuariosComponent,
-   UsuariosListarComponent,
-   UsuariosCreaditaComponent,
-   ToolbarComponent,
-   DelitosComponent,
-   DelitosListarComponent,
-   DelitosCreaditaComponent,
-   DelitosDialogoComponent,
-   ComisariaComponent,
-   ComisariaListarComponent,
-   ComisariaCreaeditaComponent,
-   ComisariaDialogoComponent,
-   UsuariosDialogoComponent,
-   
+    SuscripcionComponent,
+    SuscripcionListarComponent,
+    SuscripcionCreaeditaComponent,
+    SuscripcionDialogoComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule, 
     HttpClientModule,
     MatTableModule,
+    BrowserAnimationsModule,
     ReactiveFormsModule,
     MatNativeDateModule,
     FormsModule,
-    MatInputModule,
     MatSelectModule,
     MatDatepickerModule,
-    MatButtonModule,
-    MatToolbarModule,
-    MatIconModule,
-    MatMenuModule,
+    MatNativeDateModule,
+    ReactiveFormsModule,
     MatDialogModule,
-    MatPaginatorModule
-    
-   
+    MatInputModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

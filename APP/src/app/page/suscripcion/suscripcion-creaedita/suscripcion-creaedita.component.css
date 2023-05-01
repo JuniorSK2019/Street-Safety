@@ -1,0 +1,16 @@
+mat-form-field{
+  width:70%;
+}
+
+input{
+  width: 100%;
+}
+
+button{
+  color: rgb(5, 1, 8);
+  font-size: x-large;
+  background-color:#008CBA;
+  border-radius: 8px;
+  padding: 10px 20px;
+}
+
