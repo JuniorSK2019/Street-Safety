@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+
+        <div style="text-align: center;">
+          <h1>Lista de Mascotas</h1>
+        </div>
+        <div style="text-align: right;">
+          <button mat-raised-button color="warn" routerLink="/usuarios/nuevo">Nuevo</button>
+        </div>
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        
+          
+          <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef>No.</th>
+            <td mat-cell *matCellDef="let element">{{ element.id }}</td>
+          </ng-container>
+    
+          <ng-container matColumnDef="username">
+            <th mat-header-cell *matHeaderCellDef>Username</th>
+            <td mat-cell *matCellDef="let element">{{ element.username }}</td>
+          </ng-container>
+    
+          
+          <ng-container matColumnDef="password">
+            <th mat-header-cell *matHeaderCellDef>Password</th>
+            <td mat-cell *matCellDef="let element">{{ element.password }}</td>
+          </ng-container>
+          
+          <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef>Correo</th>
+            <td mat-cell *matCellDef="let element">{{ element.email }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="nombres_usuario">
+            <th mat-header-cell *matHeaderCellDef>Nombre de Usuario</th>
+            <td mat-cell *matCellDef="let element">{{ element.nombres_usuario }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="apellidos_usuario">
+            <th mat-header-cell *matHeaderCellDef>Apellidos de Usuario</th>
+            <td mat-cell *matCellDef="let element">{{ element.apellidos_usuario }}</td>
+          </ng-container>
+          
+         
+          <ng-container matColumnDef="fecha_nacimiento">
+            <th mat-header-cell *matHeaderCellDef>Fecha de nacimiento</th>
+            <td mat-cell *matCellDef="let element">{{ element.fecha_nacimiento|date:'dd/MM/yyyy'}}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="idalerta">
+            <th mat-header-cell *matHeaderCellDef>Tipo de Alerta</th>
+            <td mat-cell *matCellDef="let element">{{ element.idalerta }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="iddistrito">
+            <th mat-header-cell *matHeaderCellDef>Distrito</th>
+            <td mat-cell *matCellDef="let element">{{ element.iddistrito }}</td>
+          </ng-container>
+
+          <ng-container matColumnDef="idsuscripcion">
+            <th mat-header-cell *matHeaderCellDef>Tipo de Suscripcion</th>
+            <td mat-cell *matCellDef="let element">{{ element.idsuscripcion }}</td>
+          </ng-container>
+    
+          <ng-container matColumnDef="accion1">
+            <th mat-header-cell *matHeaderCellDef>Acción01</th>
+            <td mat-cell *matCellDef="let element">
+              <button mat-raised-button color="warn" [routerLink]="['edit', element.id]">Actualizar</button>
+            </td>
+          </ng-container>
+          <tr mat-header-row *matHeaderRowDef="displayColumns"></tr>
+          <tr mat-row *matRowDef="let row; columns: displayColumns"></tr>
+        </table>
+      </div>
+</body>
+</html>

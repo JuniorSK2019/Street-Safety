@@ -1,0 +1,24 @@
+ 
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Street-Safety</span>
+      <mat-icon class="example-icon" aria-hidden="false" >gavel</mat-icon>
+    </mat-toolbar-row>
+  
+  
+  
+    <mat-toolbar-row>
+      <button mat-button [matMenuTriggerFor]="menu">Menu</button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="navegar('usuarios')" >Usuarios</button>,
+    <button mat-menu-item (click)="navegar('delitos')" >Delitos</button>
+
+    
+    
+  
+  </mat-menu>
+    </mat-toolbar-row>
+
+    
+  
+  </mat-toolbar>
