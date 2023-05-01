@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div style="text-align:center">
+            <h1>Registro de Usuarios</h1>
+        </div>
+    
+    <form [formGroup]="form" (submit)="aceptar()">
+        <mat-form-field class="example-full-width">
+            <mat-label>Id</mat-label>
+            <input matInput placeholder="Id" formControlName="id">
+        </mat-form-field>
+        <br> 
+        <mat-form-field class="example-full-width">
+            <mat-label>Username</mat-label>
+            <input matInput placeholder="Username" formControlName="username">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Password</mat-label>
+            <input matInput placeholder="Password" formControlName="password">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Email</mat-label>
+            <input matInput placeholder="Email" formControlName="email">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Nombre de Usuario</mat-label>
+            <input matInput placeholder="Nombre de Usuario" formControlName="nombres_usuario">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Apellidos del Usuario</mat-label>
+            <input matInput placeholder="Apellidos del Usuario" formControlName="apellidos_usuario">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+            <mat-label>Fecha de nacimiento</mat-label>
+            <input matInput [matDatepicker]="picker" formControlName="fecha_nacimiento" placeholder="Choose a date">
+            <mat-datepicker-toggle [for]="picker"></mat-datepicker-toggle><mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>IdAlerta</mat-label>
+            <input matInput placeholder="IdAlerta" formControlName="idalerta">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Iddistrito</mat-label>
+            <input matInput placeholder="Iddistrito" formControlName="iddistrito">
+        </mat-form-field>
+        <br>
+        <mat-form-field class="example-full-width">
+            <mat-label>Idsuscripcion</mat-label>
+            <input matInput placeholder="Idsuscripcion" formControlName="idsuscripcion">
+        </mat-form-field>
+        <br>
+        <div style="text-align: center;">
+                <button mat-raised-button color="primary">Aceptar</button>
+                <button mat-raised-button color="warn" routerLink="/usuarios">Cancelar</button>
+        </div>
+    </form> 
+    </div>
+</body>
+</html>
